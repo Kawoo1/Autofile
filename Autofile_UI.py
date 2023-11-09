@@ -86,7 +86,7 @@ folders = [
 root = tk.Tk()
 root.title("File Sorter")
 
-# Create/place labels and entry widgets for source and destination directories
+# Create and place labels and entry widgets for source and destination directories
 source_label = tk.Label(root, text="Source Directory:")
 source_label.pack()
 source_entry = tk.Entry(root)
@@ -103,11 +103,17 @@ source_browse_button.pack()
 destination_browse_button = tk.Button(root, text="Browse", command=lambda: browse_directory(destination_entry))
 destination_browse_button.pack()
 
-# Create/place the organize button
+# Create an entry for CUSTON folder names
+custom_folder_label = tk.Label(root, text="Custom Folder Names (comma-separated):")
+custom_folder_label.pack()
+custom_folder_entry = tk.Entry(root)
+custom_folder_entry.pack()
+
+# Create and place the organize button
 organize_button = tk.Button(root, text="Organize Files", command=organize_files)
 organize_button.pack()
 
-# Create/place a status label
+# Create and place a status label
 status_label = tk.Label(root, text="")
 status_label.pack()
 
